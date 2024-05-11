@@ -1,9 +1,26 @@
 /* Default styles */
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    overflow: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    background: #514e4e;
+    scrollbar-width: thick;
+    scrollbar-color: #fff #514e4e;
+    scroll-snap-align: start;
+}
+
+.gallery::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gallery::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 4px;
 }
 
 .gallery a {
@@ -11,7 +28,7 @@
 }
 
 .gallery img {
-    width: 150px;
+    width: 180px;
     height: auto;
 }
 
@@ -32,6 +49,43 @@
 /* Styles for screens larger than 900px */
 @media (min-width: 900px) {
     .gallery img {
-        width: 150px;
+        width: 180px;
+    }
+}
+.gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    background: #000;
+}
+
+.gallery a {
+    margin: 10px;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    .gallery img {
+        width: 75px;
+    }
+}
+
+/* Styles for screens between 600px and 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+    .gallery img {
+        width: 100px;
+    }
+}
+
+/* Styles for screens larger than 900px */
+@media (min-width: 900px) {
+    .gallery img {
+        width: 200px;
     }
 }
