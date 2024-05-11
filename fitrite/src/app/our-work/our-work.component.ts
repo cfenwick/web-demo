@@ -41,9 +41,9 @@ export class OurWorkComponent {
         );
     }
 
-    open(index: number): void { // open lightbox
+    open(album:Array<IAlbum>, index: number): void { // open lightbox
         console.log('clicked image');
-        this._lightbox.open(this.deckImages, index);
+        this._lightbox.open(album, index);
     }
 
     close(): void { // close lightbox programmatically
