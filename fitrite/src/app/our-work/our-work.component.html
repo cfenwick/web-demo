@@ -1,6 +1,8 @@
 <h2>Decks</h2>
-<div *ngFor="let image of deckImages; index as i">
+<div id="deck-gallery" class="gallery">
+<a *ngFor="let image of deckImages; index as i" target="_blank">
     <img [src]="image.thumb" (click)="open(i)" />
+</a>
 </div>
 <h2>Kitchens</h2>
 <div id="deck-gallery" class="gallery">
