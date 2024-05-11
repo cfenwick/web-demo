@@ -1,8 +1,9 @@
 <h2>Decks</h2>
 <div class="gallery">
-    <a *ngFor="let image of deckImages" [href]="image" target="_blank">
-        <img [src]="getThumbnail(image)" alt="Deck image" />
+    <a *ngFor="let image of deckImages; let i = index" [href]="image" target="_blank">
+        <img [src]="image.thumb" alt="Deck image" (click)="open(i)"/>
     </a>
+
 </div>
 
 <h2>Kitchens</h2>
