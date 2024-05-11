@@ -14,17 +14,34 @@ import { IAlbum, Lightbox, LightboxModule } from 'ngx-lightbox';
     styleUrl: './our-work.component.scss',
 })
 export class OurWorkComponent {
-    kitchenImages = [];
-    otherImages = [];
+    kitchenImages: Array<IAlbum> = [];
+    featuredImages: Array<IAlbum> = [];
     deckImages: Array<IAlbum> = []; // Initialize deckImages as an empty array of type string[]
 
-    constructor(
-        private http: HttpClient,
-        private _lightbox: Lightbox
-    ) {
-        this.getImages('assets/images/deck-gallery').subscribe(images => {
-            images.forEach(image =>
-                this.deckImages.push({ src: image, thumb: this.getThumbnail(image) }));
+    constructor(private http: HttpClient, private _lightbox: Lightbox) {
+        this.getImages('assets/images/deck-gallery').subscribe((images) => {
+            images.forEach((image) =>
+                this.deckImages.push({
+                    src: image,
+                    thumb: this.getThumbnail(image),
+                })
+            );
+        });
+        this.getImages('assets/images/kitchen-gallery').subscribe((images) => {
+            images.forEach((image) => {
+                this.kitchenImages.push({
+                    src: image,
+                    thumb: this.getThumbnail(image),
+                });
+            });
+        });
+        this.getImages('assets/images/featured').subscribe((images) => {
+            images.forEach((image) => {
+                this.featuredImages.push({
+                    src: image,
+                    thumb: this.getThumbnail(image),
+                });
+            });
         });
     }
 
@@ -36,17 +53,23 @@ export class OurWorkComponent {
 
     getImages(directory: string): Observable<string[]> {
         const imageFile = `${directory}/images.json`;
-        return this.http.get<string[]>(imageFile).pipe(
-            map((images: string[]) => images.map((image: string) => `${directory}/${image}`))
-        );
+        return this.http
+            .get<string[]>(imageFile)
+            .pipe(
+                map((images: string[]) =>
+                    images.map((image: string) => `${directory}/${image}`)
+                )
+            );
     }
 
-    open(album:Array<IAlbum>, index: number): void { // open lightbox
+    open(album: Array<IAlbum>, index: number): void {
+        // open lightbox
         console.log('clicked image');
         this._lightbox.open(album, index);
     }
 
-    close(): void { // close lightbox programmatically
+    close(): void {
+        // close lightbox programmatically
         this._lightbox.close();
     }
 }
