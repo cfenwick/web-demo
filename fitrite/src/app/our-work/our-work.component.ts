@@ -22,13 +22,10 @@ export class OurWorkComponent {
         private http: HttpClient,
         private _lightbox: Lightbox
     ) {
-
         this.getImages('assets/images/deck-gallery').subscribe(images => {
             images.forEach(image =>
                 this.deckImages.push({ src: image, thumb: this.getThumbnail(image) }));
         });
-
-
     }
 
     getThumbnail(image: string): string {
@@ -45,6 +42,7 @@ export class OurWorkComponent {
     }
 
     open(index: number): void { // open lightbox
+        console.log('clicked image');
         this._lightbox.open(this.deckImages, index);
     }
 
