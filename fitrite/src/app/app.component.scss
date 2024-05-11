@@ -2,36 +2,36 @@
 
 // Center the img-title image
 .img-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 // Set the active tab background color
 .nav-tabs .nav-link.active {
-  background-color: #f8f9fa;
+    background-color: #f8f9fa;
 }
 
 // Set the tab text color
 .nav-tabs .nav-link {
-  color: #333;
+    color: #333;
 }
 
 // Set the tab hover color
 .nav-tabs .nav-link:hover {
-  color: #007bff;
+    color: #007bff;
 }
 
 // Set the tab border color
 .nav-tabs .nav-link {
-  border-color: #ddd;
+    border-color: #ddd;
 }
 
 // Set the tab border radius
 .nav-tabs .nav-link {
-  border-radius: 0;
+    border-radius: 0;
 }
 
 // Set the tab padding
 .nav-tabs .nav-link {
-  padding: 10px 15px;
+    padding: 10px 15px;
 }

@@ -9,6 +9,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-    images = ['assets/beach_deck_slider.jpg', 'assets/combo_slider.jpg',
-        'assets/double_deck_slider.jpg'];
+    images = [
+        'assets/beach_deck_slider.jpg',
+        'assets/combo_slider.jpg',
+        'assets/double_deck_slider.jpg',
+    ];
 }

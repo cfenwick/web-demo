@@ -1,20 +1,20 @@
 <h2>Decks</h2>
 <div class="gallery">
     <a *ngFor="let image of deckImages" [href]="image" target="_blank">
-        <img [src]=getThumbnail(image) alt="Deck image">
+        <img [src]="getThumbnail(image)" alt="Deck image" />
     </a>
 </div>
 
 <h2>Kitchens</h2>
 <div id="deck-gallery" class="gallery">
     <a *ngFor="let image of kitchenImages" [href]="image" target="_blank">
-        <img [src]=getThumbnail(image) alt="Kitchen image">
+        <img [src]="getThumbnail(image)" alt="Kitchen image" />
     </a>
 </div>
 
 <h2>Other Work</h2>
 <div class="gallery">
     <a *ngFor="let image of otherImages" [href]="image" target="_blank">
-        <img [src]=getThumbnail(image) alt="Other work image">
+        <img [src]="getThumbnail(image)" alt="Other work image" />
     </a>
 </div>
