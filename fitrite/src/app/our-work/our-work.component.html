@@ -5,15 +5,15 @@
     </a>
 </div>
 <h2>Kitchens</h2>
-<div id="deck-gallery" class="gallery">
-    <a *ngFor="let image of kitchenImages" [href]="image" target="_blank">
-        <img [src]="getThumbnail(image)" alt="Kitchen image" />
+<div id="kitchen-gallery" class="gallery">
+    <a *ngFor="let image of kitchenImages; index as i" target="_blank">
+        <img [src]="image.thumb" (click)="open(kitchenImages, i)" />
     </a>
 </div>
 
 <h2>Other Work</h2>
-<div class="gallery">
-    <a *ngFor="let image of otherImages" [href]="image" target="_blank">
-        <img [src]="getThumbnail(image)" alt="Other work image" />
+<div id="misc-gallery" class="gallery">
+    <a *ngFor="let image of featuredImages; index as i" target="_blank">
+        <img [src]="image.thumb" (click)="open(featuredImages, i)" />
     </a>
 </div>
