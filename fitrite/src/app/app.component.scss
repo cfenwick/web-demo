@@ -1,37 +1,206 @@
 // Custom styles for Bootstrap tab navigation
 
+.logo {
+    @media (max-width: 600px) {
+        width: 50%;
+    }
+    @media (max-width:720px) {
+        width: 75%;
+    }
+}
+.top-bar {
+    background-color: #333;
+    text-decoration: solid;
+    text-decoration-color: #f8f9fa;
+    height: auto;
+    padding: 10px;
+    display: flex;
+}
+.top-bar .top-bar-left {
+    width: 90%;
+    display: flex;
+}
+.top-bar .top-bar-right {
+    width: 100%;
+    display: flex;
+}
+.top-bar .contact-value {
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 3px 3px;
+    white-space: nowrap;
+}
+.top-bar .contact-type {
+    color: #f8f9fa;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 3px 3px;
+    font-weight: bold;
+}
+
+
+.menu-bar {
+    background-color: #f8f8f8;
+    text-decoration: solid;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    vertical-align: middle;
+    @media (max-width: 720px) {
+        width: 100%;
+        display:block;
+        align-content: center;
+    }
+}
+
+.menu-bar .menu-bar-left {
+    width: 70%;
+    display: flex;
+    @media (max-width: 720px) {
+        width: 100%;
+    }
+}
+
+
+.menu-bar-left, .menu-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 // Center the img-title image
 .img-title {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+ul.nav {
+    align-items: center;
+}
+li.nav-item {
+   align-items: center;
+
+}
 // Set the active tab background color
-.nav-tabs .nav-link.active {
-    background-color: #f8f9fa;
+a.nav-link .selected {
+    background-color: #333;
+    color: #f8f9fa;
 }
 
-// Set the tab text color
-.nav-tabs .nav-link {
+a.nav-link.btn {
+    .selected {
+        background-color: #333;
+        color: #f8f9fa;
+    }
+    color: #000;
+    text-decoration: solid;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1.5em;
+    vertical-align: middle;
+
+}
+
+a.nav-link.btn.selected {
+    border: 1px solid #333;
+    background-color: #333;
+    color: #f8f9fa;
+}
+
+a.nav-link.btn:hover {
+    background-color: #f8f9fa;
     color: #333;
 }
 
-// Set the tab hover color
-.nav-tabs .nav-link:hover {
-    color: #007bff;
+.testimonials-section {
+    background-color: #ffffff;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
-// Set the tab border color
-.nav-tabs .nav-link {
-    border-color: #ddd;
+.testimonials-carousel {
+    align-self: center;
+    position: relative;
+    left: 0;
+    width: 90%;
+    height: 50em;
+    max-width: 1024px;
+    height: auto; /* Change this from 100% to auto */
+    overflow: auto; /* Add this line to clear the floats */
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0px;
+
+    .slide {
+        background-color: #f8f8f8;
+    }
+    .item {
+        margin: 0px;
+        padding: 0px;
+
+    }
+    .item.active {
+        background-color: #f8f8f8;
+    }
+    .carousel-item.active {
+        display: block;
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+    .carousel-control-next, .carousel-control-prev {
+        filter: invert(100%);
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background-color: #322f2f;
+        // margin: 0 5px;
+        padding: 0;
+        color: #322f2f;
+        font-size: 5em;
+        cursor: pointer;
+
+    }
+
+   .carousel-indicators button.active {
+        background-color: #333;
+    }
+
+    .testimonial {
+        background: #f8f8f8;
+        margin-top: .5m;
+        margin-bottom: .5em;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 1em;
+    }
+
+
+
 }
 
-// Set the tab border radius
-.nav-tabs .nav-link {
-    border-radius: 0;
+.slick-track
+{
+    display: flex !important;
 }
 
-// Set the tab padding
-.nav-tabs .nav-link {
-    padding: 10px 15px;
+.slick-slide
+{
+    height: inherit !important;
 }
+
+

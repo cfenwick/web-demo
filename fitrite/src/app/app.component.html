@@ -1,18 +1,179 @@
-<div class="container">
-    <div class="img-title">
-        <img src="assets/Fit-Rite.png" alt="Fitrite Logo" />
+<div class="app">
+    <div class="top-bar">
+        <div class="top-bar-left">&nbsp;
+        </div>
+        <div class="top-bar-right">
+            <span class="contact-type">email:</span>
+            <a class="contact-value" href="mailto:fitrite@eastlink.ca">fitrite&#64;eastlink.ca</a>
+            <span class="contact-type">phone:</span>
+            <span class="contact-value">(902) 830-3629</span>
+        </div>
     </div>
+    <div class="menu-bar">
+        <div class="menu-bar-left">
+            <img class="logo" src="assets/Fit-Rite.png" alt="Fitrite Logo" />
+        </div>
+        <div class="menu-bar-right">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link btn" routerLinkActive="selected" routerLink="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn" routerLinkActive="selected" routerLink="services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn" routerLinkActive="selected" routerLink="our-work">Our Work</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    <div class="testimonials-section">
+        <carousel class="testimonials-carousel" [interval]=100000>
+            <slide>
+                <div class="testimonial">
+                    <p>Engineered expertise coupled with stellar benchmark ingenuity, Fit Rite Construction and
+                        Renovation brought what we had envisioned to fruition. Our exquisite landscape additions surpass
+                        all expectations, aesthetically pleasing in every way; our hopeful dream, a reality!
+                    </p>
+                    <p>
+                        Sharon Shearer, Stellarton, Nova Scotia
+                    </p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        Product yield … outstanding, professionalism … applaudable, pricing … exceptionally fair,
+                        distanced
+                        commute … doable, handshake of friendship … lasting, and … our cherished garden setting now
+                        enjoys
+                        huge visual impact while adding permanent value.
+                    </p>
+                    <p>
+                        Sharon Shearer, Stellarton, Nova Scotia
+                    </p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        Offering a customized blueprint of infinite possibilities, a signature performance earmarked
+                        with
+                        creative distinction and a high standard of work ethic and a commitment to excellence
+                        unwavering, it
+                        is without hesitation that Fit Rite comes HIGHLY RECOMMENDED.
+                    </p>
+                    <p>
+                        Sharon Shearer
+                        Stellarton, Nova Scotia
+                    </p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        Owning a century old home can be an endless parade of maintenance and improvement projects.
+                        After
+                        working with many contractors on jobs both large and small we have finally found one who
+                        consistently exceeds our expectations.
+                    </p>
+                    <p>
+                        Don Norrad and Kate McKillop , July 2013
+                        Halifax, NS
+                    </p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        We have already contracted their services for future projects of enhancement.
+                    </p>
+                    <p> Sharon Shearer,
+                        Stellarton, Nova Scotia
+                    </p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        Greg is honest, straightforward, reliable and personable. He has earned our confidence and we
+                        look
+                        forward to working with him on future projects. We whole heartedly recommend Greg to anyone
+                        looking
+                        for a great contractor.
+                    </p>
+                    <p>
+                        Don Norrad and Kate McKillop , July 2013
+                        Halifax, NS
+                    </p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        From the first time we met Greg it felt like we known him for a while, very approachable,
+                        answered all the questions we had
+                        (and there were a lot!), and gave us some different ideas for our project that we normally
+                        wouldn't have come up with on our own.
+                    </p>
+                    <p>
+                        Shelley & Jason Burgess,
+                        Lr. Sackville, NS
+                    </p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        His professionalism, attention to detail, and customer based focus is excellent and a rare trait
+                        to
+                        find in this day in age. We highly recommend Fit Rite Construction for any renovation or new
+                        project
+                        you may have.
+                    </p>
+                    <p>
+                        Shelley & Jason Burgess
+                        Lr. Sackville, NS
+                    </p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        He was wonderful to work with
+                        and I highly recommend Fit Rite to any individual or company looking for a contractor who does
+                        great
+                        work and who can be trusted.
+                    </p>
+                    <p>Bev Sample</p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        Greg was able to see my vision, he paid attention to details and the quality of his work is
+                        superb.
+                        He stayed on budget and was able to finish projects within a timely manner.
 
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="home">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="services">Services</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="our-work">Our Work</a>
-        </li>
-    </ul>
-    <router-outlet></router-outlet>
+                    </p>
+                    <p>Bev Sample</p>
+                </div>
+            </slide>
+            <slide>
+                <div class="testimonial">
+                    <p>
+                        He was wonderful to work with
+                        and I highly recommend Fit Rite to any individual or company looking for a contractor who does
+                        great
+                        work and who can be trusted.
+                    </p>
+                    <p>Bev Sample</p>
+                </div>
+            </slide>
+
+        </carousel>
+    </div>
 </div>
