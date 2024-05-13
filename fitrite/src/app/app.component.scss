@@ -23,8 +23,12 @@
 .top-bar .top-bar-right {
     width: 100%;
     display: flex;
+    justify-content: flex-end;
+    @media (max-width: 720px)   {
+        justify-content: center;
+    }
 }
-.top-bar .contact-value {
+.top-bar .contact-value , .contact-value a{
     color: #f8f9fa;
     text-decoration: none;
     padding: 3px 3px;
@@ -64,8 +68,13 @@
 
 .menu-bar-left, .menu-bar-right {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    @media screen and (max-width: 720px) {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
 }
 // Center the img-title image
 .img-title {
